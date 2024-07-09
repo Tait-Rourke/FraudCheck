@@ -1,6 +1,8 @@
 # FraudCheck
 As an analyst for the state, working with auditors to identify fraud is a common task
-To avoid any private information being shared, all tables and fields have been altered for sharing
+To avoid any private information being shared, all tables and fields have been altered for sharing 
+and the original data files will not be shared due to PII regulations, both files were Flat Files
+prior to being uploaded to SSMS
 
 In this case, I am reviewing a health care transaction table as well as a death records table
 at different time periods. Specifically, I check for transactions 0-6 months after said customer 
