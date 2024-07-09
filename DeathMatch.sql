@@ -3,7 +3,7 @@ SELECT *, SUM(paid_amount) AS total_paid_amount
 FROM Transactions_FY23
 INNER JOIN DeathRecord24 ON plan_id_num = plan_unique_id
 GROUP BY Transactions_FY23.id, DeathRecord24.plan_unique_id;
--- END 24mo
+-- END 24mo as no results yielded from the most general query needed
  
 -- JOIN for Death Match over 12mo by plan ID 
 SELECT DISTINCT plan_member_id, SUM(paid_amount) AS total_paid_amount
