@@ -34,7 +34,7 @@ SELECT DISTINCT first_name, last_name, plan_member_id, paid_amount, paid_date, s
 FROM Transactions_FY23
 INNER JOIN DeathRecord712 ON plan_id_num = plan_member_id
 ORDER BY paid_amount DESC;
--- Use previous found results to subquery or transactions with a 6 month buffer
+-- Use previous found results to now query for transactions with a 6 month buffer
 SELECT DISTINCT first_name, last_name, plan_member_id, paid_amount, paid_date, service_end_date, Death_Date, SUM(paid_amount) AS total_paid_amount
 FROM Transactions_FY23
 INNER JOIN DeathRecord712 ON plan_id_num = plan_member_id
@@ -48,7 +48,7 @@ SELECT DISTINCT plan_member_id, SUM(paid_amount) AS total_paid_amount
 FROM Transactions_FY23
 INNER JOIN DeathRecord06 ON plan_id_num = plan_member_id
 GROUP BY plan_member_id;
--- Use previous found results to subquery or transactions
+-- Use previous found results to now query for more attributes, no 6 month buffer due to lack of a longer time period in data
 SELECT DISTINCT first_name, last_name, plan_member_id, paid_amount, paid_date, service_end_date, Death_Date
 FROM Transactions_FY23
 INNER JOIN DeathRecord06 ON plan_id_num = plan_member_id
