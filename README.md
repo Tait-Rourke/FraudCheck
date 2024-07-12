@@ -8,7 +8,7 @@ In this case, I am reviewing a health care transaction table as well as a death 
 at different time periods. Specifically, I check for transactions 0-6 months after said customer 
 died, 7-12 months following, 12+ months following, and 24+ months following.
 
-I was able to inner join these tables by medical ID or by SSN depending on whcih were available for each time period.
+I was able to inner join these tables by medical ID or by SSN depending on which were available for each time period.
 From there, I could pull more specific attributes from each row to allow for further analysis following the 
 join. 
 
